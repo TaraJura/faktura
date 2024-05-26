@@ -1,0 +1,174 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100">
+  <form class="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl">
+    <h2 class="text-2xl font-semibold leading-7 text-gray-900 mb-8">Vytvořit fakturu</h2>
+
+    <div class="mb-6">
+      <label for="invoice-type" class="block text-sm font-medium leading-6 text-gray-900">Druh faktury</label>
+      <select id="invoice-type" name="invoice-type" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+        <option value="bez-dph">Faktura bez DPH (nejsem plátce DPH)</option>
+      </select>
+    </div>
+
+    <div class="grid grid-cols-1 gap-y-6 gap-x-8 sm:grid-cols-2 mb-6">
+      <div>
+        <label for="invoice-number" class="block text-sm font-medium leading-6 text-gray-900">Číslo</label>
+        <input type="text" name="invoice-number" id="invoice-number" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+      </div>
+
+      <div>
+        <label for="record-number" class="block text-sm font-medium leading-6 text-gray-900">Evidenční číslo</label>
+        <input type="text" name="record-number" id="record-number" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+      </div>
+
+      <div>
+        <label for="variable-symbol" class="block text-sm font-medium leading-6 text-gray-900">Variabilní symbol</label>
+        <input type="text" name="variable-symbol" id="variable-symbol" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+      </div>
+
+      <div>
+        <label for="constant-symbol" class="block text-sm font-medium leading-6 text-gray-900">Konstantní symbol</label>
+        <input type="text" name="constant-symbol" id="constant-symbol" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+      </div>
+
+      <div>
+        <label for="issuer" class="block text-sm font-medium leading-6 text-gray-900">Vystavil</label>
+        <input type="text" name="issuer" id="issuer" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+      </div>
+
+      <div>
+        <label for="issue-date" class="block text-sm font-medium leading-6 text-gray-900">Datum vystavení</label>
+        <input type="date" name="issue-date" id="issue-date" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+      </div>
+
+      <div>
+        <label for="due-date" class="block text-sm font-medium leading-6 text-gray-900">Splatnost</label>
+        <input type="date" name="due-date" id="due-date" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+      </div>
+
+      <div>
+        <label for="payment-method" class="block text-sm font-medium leading-6 text-gray-900">Forma úhrady</label>
+        <input type="text" name="payment-method" id="payment-method" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+      </div>
+
+      <div>
+        <label for="account-number" class="block text-sm font-medium leading-6 text-gray-900">Číslo účtu</label>
+        <input type="text" name="account-number" id="account-number" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-y-6 gap-x-8 sm:grid-cols-2 mb-6">
+      <div>
+        <h3 class="text-xl font-semibold leading-7 text-gray-900 mb-6">Odběratel</h3>
+        <div class="grid grid-cols-1 gap-y-6 gap-x-8 mb-6">
+          <div>
+            <label for="customer-name" class="block text-sm font-medium leading-6 text-gray-900">Odběratel</label>
+            <input type="text" name="customer-name" id="customer-name" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="Zadejte jméno odběratele, IČ, nebo vyberte ze seznamu">
+          </div>
+
+          <div>
+            <label for="customer-ico" class="block text-sm font-medium leading-6 text-gray-900">IČO</label>
+            <input type="text" name="customer-ico" id="customer-ico" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+          </div>
+
+          <div>
+            <label for="customer-dic" class="block text-sm font-medium leading-6 text-gray-900">DIČ</label>
+            <input type="text" name="customer-dic" id="customer-dic" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+          </div>
+
+          <div>
+            <label for="customer-street" class="block text-sm font-medium leading-6 text-gray-900">Ulice</label>
+            <input type="text" name="customer-street" id="customer-street" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+          </div>
+
+          <div>
+            <label for="customer-city" class="block text-sm font-medium leading-6 text-gray-900">Město</label>
+            <input type="text" name="customer-city" id="customer-city" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+          </div>
+
+          <div>
+            <label for="customer-zip" class="block text-sm font-medium leading-6 text-gray-900">PSČ</label>
+            <input type="text" name="customer-zip" id="customer-zip" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+          </div>
+
+          <div>
+            <label for="customer-country" class="block text-sm font-medium leading-6 text-gray-900">Země</label>
+            <input type="text" name="customer-country" id="customer-country" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="Česká republika">
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold leading-7 text-gray-900 mb-6">Dodavatel</h3>
+        <div class="grid grid-cols-1 gap-y-6 gap-x-8 mb-6">
+          <div>
+            <label for="supplier-ico" class="block text-sm font-medium leading-6 text-gray-900">IČO</label>
+            <input type="text" name="supplier-ico" id="supplier-ico" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="09253378">
+          </div>
+
+          <div>
+            <label for="supplier-name" class="block text-sm font-medium leading-6 text-gray-900">Jméno</label>
+            <input type="text" name="supplier-name" id="supplier-name" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="Jiří Novák">
+          </div>
+
+          <div>
+            <label for="supplier-dic" class="block text-sm font-medium leading-6 text-gray-900">DIČ</label>
+            <input type="text" name="supplier-dic" id="supplier-dic" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+          </div>
+
+          <div>
+            <label for="supplier-street" class="block text-sm font-medium leading-6 text-gray-900">Ulice</label>
+            <input type="text" name="supplier-street" id="supplier-street" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="11, Nedašov">
+          </div>
+
+          <div>
+            <label for="supplier-city" class="block text-sm font-medium leading-6 text-gray-900">Město</label>
+            <input type="text" name="supplier-city" id="supplier-city" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="Nedašov">
+          </div>
+
+          <div>
+            <label for="supplier-zip" class="block text-sm font-medium leading-6 text-gray-900">PSČ</label>
+            <input type="text" name="supplier-zip" id="supplier-zip" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="76332">
+          </div>
+
+          <div>
+            <label for="supplier-country" class="block text-sm font-medium leading-6 text-gray-900">Země</label>
+            <input type="text" name="supplier-country" id="supplier-country" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="Česká republika">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="text-xl font-semibold leading-7 text-gray-900 mb-6">Položky faktury</h3>
+    <div class="grid grid-cols-1 gap-y-6 gap-x-8 sm:grid-cols-2 mb-6">
+      <div>
+        <label for="item-quantity" class="block text-sm font-medium leading-6 text-gray-900">Počet</label>
+        <input type="number" name="item-quantity" id="item-quantity" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+      </div>
+
+      <div>
+        <label for="item-unit" class="block text-sm font-medium leading-6 text-gray-900">M.J.</label>
+        <input type="text" name="item-unit" id="item-unit" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" value="ks">
+      </div>
+
+      <div class="col-span-2">
+        <label for="item-description" class="block text-sm font-medium leading-6 text-gray-900">Popis</label>
+        <input type="text" name="item-description" id="item-description" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+      </div>
+
+      <div>
+        <label for="item-price" class="block text-sm font-medium leading-6 text-gray-900">Cena</label>
+        <input type="number" name="item-price" id="item-price" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+      </div>
+
+      <div>
+        <label for="item-total" class="block text-sm font-medium leading-6 text-gray-900">Celkem</label>
+        <input type="number" name="item-total" id="item-total" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
+      </div>
+    </div>
+
+    <div class="flex items-center justify-end gap-x-6">
+      <button type="button" class="text-sm font-semibold leading-6 text-gray-900">Zrušit</button>
+      <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Uložit</button>
+    </div>
+  </form>
+</div>
